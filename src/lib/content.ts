@@ -1,6 +1,6 @@
 // Everything Steve is likely to want to tweak lives here.
 
-export const CAL_COM_URL = "https://cal.com/your-handle/15min"; // TODO: replace with your real Cal.com link
+export const CAL_COM_URL = "https://cal.com/stevewardaustin/15-min-brainstorm";
 
 // TODO: swap these for the companies you're actually targeting.
 export const TARGET_COMPANIES = [
