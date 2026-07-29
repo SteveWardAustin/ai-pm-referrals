@@ -6,10 +6,12 @@ import { REFERRAL_BLURB } from "@/lib/content";
 import { recordSubmission, type IntroStyle } from "@/lib/submissions";
 
 export default function AskScreen({
+  referredBy,
   onBack,
   onSubmitted,
   onNoOneComesToMind,
 }: {
+  referredBy: string;
   onBack: () => void;
   onSubmitted: () => void;
   onNoOneComesToMind: () => void;
@@ -31,6 +33,7 @@ export default function AskScreen({
       contact_name: contactName.trim(),
       contact_method: contactMethod.trim(),
       intro_style: introStyle,
+      referred_by: referredBy,
     });
     setIsSubmitting(false);
     onSubmitted();

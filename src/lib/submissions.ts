@@ -7,12 +7,14 @@ export type ReferralSubmission = {
   contact_name: string;
   contact_method: string;
   intro_style: IntroStyle;
+  referred_by: string;
 };
 
 export type FitSuggestionSubmission = {
   submission_type: "fit_suggestion";
   fit_notes: string;
   recognized_companies: string;
+  referred_by: string;
 };
 
 export type Submission = ReferralSubmission | FitSuggestionSubmission;

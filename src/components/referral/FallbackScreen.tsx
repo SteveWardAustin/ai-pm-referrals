@@ -6,9 +6,11 @@ import { CAL_COM_URL, FORWARD_BLURB, TARGET_COMPANIES } from "@/lib/content";
 import { recordSubmission } from "@/lib/submissions";
 
 export default function FallbackScreen({
+  referredBy,
   onBack,
   onSubmitted,
 }: {
+  referredBy: string;
   onBack: () => void;
   onSubmitted: () => void;
 }) {
@@ -38,6 +40,7 @@ export default function FallbackScreen({
       submission_type: "fit_suggestion",
       fit_notes: fitNotes.trim(),
       recognized_companies: Array.from(checkedCompanies).join(", "),
+      referred_by: referredBy,
     });
     setIsSubmitting(false);
     onSubmitted();

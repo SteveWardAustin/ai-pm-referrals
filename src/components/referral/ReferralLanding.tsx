@@ -5,12 +5,14 @@ import IntroScreen from "@/components/referral/IntroScreen";
 import AskScreen from "@/components/referral/AskScreen";
 import FallbackScreen from "@/components/referral/FallbackScreen";
 import ThanksScreen from "@/components/referral/ThanksScreen";
+import { getReferredByFromUrl } from "@/lib/referredBy";
 
 type Screen = "intro" | "ask" | "fallback" | "thanks";
 
 export default function ReferralLanding() {
   const [screen, setScreen] = useState<Screen>("intro");
   const [thanksVariant, setThanksVariant] = useState<"referral" | "fit">("referral");
+  const [referredBy] = useState(getReferredByFromUrl);
 
   return (
     <main className="flex min-h-screen flex-1 items-center justify-center bg-gradient-to-b from-[#fffaf3] to-[#fdf1e2] px-4 py-10 sm:py-16">
@@ -19,6 +21,7 @@ export default function ReferralLanding() {
 
         {screen === "ask" && (
           <AskScreen
+            referredBy={referredBy}
             onBack={() => setScreen("intro")}
             onNoOneComesToMind={() => setScreen("fallback")}
             onSubmitted={() => {
@@ -30,6 +33,7 @@ export default function ReferralLanding() {
 
         {screen === "fallback" && (
           <FallbackScreen
+            referredBy={referredBy}
             onBack={() => setScreen("ask")}
             onSubmitted={() => {
               setThanksVariant("fit");
