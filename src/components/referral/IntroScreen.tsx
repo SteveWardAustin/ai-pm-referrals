@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HIGHLIGHTS = [
   "20 years of PM leadership at Dell, Boeing & Honeywell",
   "UT Austin McCombs — 7-month AI/ML program grad",
@@ -7,6 +9,15 @@ const HIGHLIGHTS = [
 export default function IntroScreen({ onNext }: { onNext: () => void }) {
   return (
     <div className="flex flex-col gap-6">
+      <Image
+        src="/steve-headshot.jpg"
+        alt="Steve Ward"
+        width={96}
+        height={96}
+        priority
+        className="h-24 w-24 rounded-full object-cover ring-4 ring-white shadow-lg shadow-accent/10"
+      />
+
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">
         Job search, in progress
       </p>
