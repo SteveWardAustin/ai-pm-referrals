@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Steve Ward — Help Me Find My Next Role",
   description:
-    "Steve Ward is moving into AI Product Management after 20 years leading PM/program work at Dell, Boeing, and Honeywell. Know someone he should talk to?",
+    "Steve Ward is moving into AI Project Management after 20 years leading PM/program work at Dell, Boeing, and Honeywell. Know someone he should talk to?",
 };
 
 export default function RootLayout({

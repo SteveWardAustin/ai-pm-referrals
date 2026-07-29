@@ -3,7 +3,7 @@ import Image from "next/image";
 const HIGHLIGHTS = [
   "20 years of PM leadership at Dell, Boeing & Honeywell",
   "UT Austin McCombs — 7-month AI/ML program grad",
-  "Targeting AI Product Manager roles · Austin or remote",
+  "Targeting AI Project Manager roles · Austin or remote",
 ];
 
 export default function IntroScreen({ onNext }: { onNext: () => void }) {
@@ -34,7 +34,7 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
         shipping complex, technical programs at scale. Now I&apos;m moving
         into AI project leadership: I just completed UT Austin McCombs&apos;
         7-month AI/ML program, and I&apos;m looking for my next role as an AI
-        Product Manager in Austin or remote.
+        Project Manager in Austin or remote.
       </p>
 
       <ul className="flex flex-col gap-2">

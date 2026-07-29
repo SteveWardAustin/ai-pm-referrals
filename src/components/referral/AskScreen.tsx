@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import CopyButton from "@/components/CopyButton";
-import { REFERRAL_BLURB } from "@/lib/content";
+import { getReferralBlurb } from "@/lib/content";
 import { recordSubmission, type IntroStyle } from "@/lib/submissions";
 
 export default function AskScreen({
@@ -22,6 +22,7 @@ export default function AskScreen({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const canSubmit = contactName.trim().length > 0 && contactMethod.trim().length > 0;
+  const referralBlurb = getReferralBlurb(contactName);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -121,12 +122,12 @@ export default function AskScreen({
         <div className="flex flex-col gap-2 rounded-xl border border-accent/20 bg-accent/5 p-4">
           <div className="flex items-center justify-between gap-3">
             <span className="text-sm font-medium text-foreground/80">
-              Want to make it easy? Copy this to forward:
+              Want to make it easy? Copy this intro email — CC us both:
             </span>
-            <CopyButton text={REFERRAL_BLURB} className="shrink-0" />
+            <CopyButton text={referralBlurb} className="shrink-0" />
           </div>
           <p className="whitespace-pre-line text-sm leading-relaxed text-foreground/70">
-            {REFERRAL_BLURB}
+            {referralBlurb}
           </p>
         </div>
 

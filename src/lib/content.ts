@@ -12,8 +12,13 @@ export const TARGET_COMPANIES = [
   "Target Company 6",
 ];
 
-export const REFERRAL_BLURB = `Quick intro — my friend Steve Ward is moving into AI Product Management after 20 years leading PM/program work at Dell, Boeing, and Honeywell. He just finished UT Austin McCombs' AI/ML program and is targeting AI PM roles in Austin or remote.
-Worth a quick chat? Happy to make a proper intro if so.
-Thanks for considering it!`;
+export function getReferralBlurb(contactName: string): string {
+  const name = contactName.trim() || "[Name]";
+  return `${name} — meet my friend Steve Ward. Steve — meet ${name}.
 
-export const FORWARD_BLURB = `A friend of mine, Steve Ward, is looking for his next AI Product Manager role (20 yrs PM experience at Dell/Boeing/Honeywell, just completed UT Austin McCombs' AI/ML program). Thought of you / your network — take a look:`;
+Steve's moving into AI Project Management after 20 years leading PM/program work at Dell, Boeing, and Honeywell. He just finished UT Austin McCombs' AI/ML program and is targeting AI PM roles in Austin or remote.
+
+Worth a quick chat? I'll let you two take it from here!`;
+}
+
+export const FORWARD_BLURB = `A friend of mine, Steve Ward, is looking for his next AI Project Manager role (20 yrs PM experience at Dell/Boeing/Honeywell, just completed UT Austin McCombs' AI/ML program). Thought of you / your network — take a look:`;
