@@ -15,8 +15,8 @@ export default function ReferralLanding() {
   const [referredBy] = useState(getReferredByFromUrl);
 
   return (
-    <main className="flex min-h-screen flex-1 items-center justify-center bg-gradient-to-br from-orange-500 via-amber-400 to-blue-600 px-4 py-10 sm:py-16">
-      <div className="w-full max-w-lg rounded-3xl border border-white/40 bg-white/80 p-6 shadow-2xl shadow-blue-950/20 backdrop-blur-md sm:p-10">
+    <main className="flex min-h-screen flex-1 items-center justify-center bg-blue-950 px-4 py-10 sm:py-16">
+      <div className="w-full max-w-lg rounded-3xl border-t-4 border-accent bg-white/95 p-6 shadow-2xl shadow-black/40 sm:p-10">
         {screen === "intro" && <IntroScreen onNext={() => setScreen("ask")} />}
 
         {screen === "ask" && (
