@@ -24,18 +24,12 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
       </p>
 
       <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
-        Know someone I should meet?
+        Know someone I should meet? 💡
       </h1>
 
       <p className="text-lg leading-relaxed text-foreground/80">
-        For 20 years I&apos;ve led product and program teams at{" "}
-        <span className="font-semibold text-foreground">Dell</span>,{" "}
-        <span className="font-semibold text-foreground">Boeing</span>, and{" "}
-        <span className="font-semibold text-foreground">Honeywell</span> —
-        shipping complex, technical programs at scale. Now I&apos;m moving
-        into AI project leadership: I just completed UT Austin McCombs&apos;
-        7-month AI/ML program, and I&apos;m looking for my next role as an AI
-        Project Manager in Austin or remote.
+        I&apos;m looking for a new job in AI, where I can use my years of
+        project mgmt experience along with strong AI technical skills.
       </p>
 
       <ul className="flex flex-col gap-2">
