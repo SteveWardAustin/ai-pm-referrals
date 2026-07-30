@@ -25,7 +25,7 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
         </span>
       </div>
 
-      <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+      <p className="text-base font-semibold uppercase tracking-wide text-accent">
         Steve&apos;s job search, in progress
       </p>
 
@@ -33,14 +33,14 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
         Know someone I should meet? 💡
       </h1>
 
-      <p className="text-lg leading-relaxed text-foreground/80">
+      <p className="text-xl leading-relaxed text-foreground/80">
         I&apos;m looking for a new job in AI, where I can use my years of
         project mgmt experience along with strong AI technical skills.
       </p>
 
       <ul className="flex flex-col gap-2">
         {HIGHLIGHTS.map((h) => (
-          <li key={h} className="flex items-start gap-2.5 text-sm text-foreground/70">
+          <li key={h} className="flex items-start gap-2.5 text-base text-foreground/70">
             <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
             {h}
           </li>
@@ -51,7 +51,7 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
         {TARGET_ROLES.map((role) => (
           <span
             key={role}
-            className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent"
+            className="rounded-full bg-accent/10 px-3 py-1.5 text-sm font-medium text-accent"
           >
             {role}
           </span>
@@ -61,7 +61,7 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
       <button
         type="button"
         onClick={onNext}
-        className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-base font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-transform active:scale-[0.98] hover:brightness-110"
+        className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-transform active:scale-[0.98] hover:brightness-110"
       >
         Help me find my next role
         <svg
