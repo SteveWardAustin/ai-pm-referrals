@@ -20,11 +20,11 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
       />
 
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-        Job search, in progress
+        Steve&apos;s job search, in progress
       </p>
 
       <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
-        Hi, I&apos;m Steve Ward.
+        Know someone I should meet?
       </h1>
 
       <p className="text-lg leading-relaxed text-foreground/80">
