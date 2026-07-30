@@ -2,15 +2,7 @@
 
 export const CAL_COM_URL = "https://cal.com/stevewardaustin/15-min-brainstorm";
 
-// TODO: swap these for the companies you're actually targeting.
-export const TARGET_COMPANIES = [
-  "Target Company 1",
-  "Target Company 2",
-  "Target Company 3",
-  "Target Company 4",
-  "Target Company 5",
-  "Target Company 6",
-];
+export const TARGET_COMPANIES = ["Garmin", "Apptronik", "Saronic"];
 
 export const TARGET_ROLES = [
   "AI/ML Project Management",
