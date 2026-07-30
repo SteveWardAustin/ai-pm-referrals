@@ -10,14 +10,20 @@ const HIGHLIGHTS = [
 export default function IntroScreen({ onNext }: { onNext: () => void }) {
   return (
     <div className="flex flex-col gap-6">
-      <Image
-        src="/steve-headshot.jpg"
-        alt="Steve Ward"
-        width={96}
-        height={96}
-        priority
-        className="h-24 w-24 rounded-full object-cover ring-4 ring-white shadow-lg shadow-accent/10"
-      />
+      <div className="relative -mx-6 -mt-6 h-48 overflow-hidden rounded-t-3xl sm:-mx-10 sm:-mt-10 sm:h-64">
+        <Image
+          src="/steve-sailing.jpg"
+          alt="Steve Ward sailing"
+          fill
+          priority
+          sizes="(max-width: 640px) 100vw, 512px"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+        <span className="absolute bottom-3 left-3 rounded-full bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+          Austin, TX
+        </span>
+      </div>
 
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">
         Steve&apos;s job search, in progress
