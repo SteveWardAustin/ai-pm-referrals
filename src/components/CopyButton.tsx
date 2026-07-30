@@ -29,7 +29,7 @@ export default function CopyButton({
     <button
       type="button"
       onClick={handleCopy}
-      className={`inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-sm font-medium text-accent transition-colors hover:bg-accent/20 ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-base font-medium text-accent transition-colors hover:bg-accent/20 ${className}`}
     >
       {copied ? (
         <>

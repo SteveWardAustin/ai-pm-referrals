@@ -56,7 +56,7 @@ export default function FallbackScreen({
       <button
         type="button"
         onClick={onBack}
-        className="flex w-fit items-center gap-1 text-sm text-foreground/50 transition-colors hover:text-foreground/80"
+        className="flex w-fit items-center gap-1 text-base text-foreground/50 transition-colors hover:text-foreground/80"
       >
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -71,14 +71,14 @@ export default function FallbackScreen({
       </div>
 
       <section className="flex flex-col gap-2.5">
-        <h3 className="text-sm font-semibold text-foreground/80">
+        <h3 className="text-base font-semibold text-foreground/80">
           Recognize anyone from these companies?
         </h3>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {TARGET_COMPANIES.map((company) => (
             <label
               key={company}
-              className={`flex cursor-pointer items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-sm transition-colors ${
+              className={`flex cursor-pointer items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-base transition-colors ${
                 checkedCompanies.has(company)
                   ? "border-accent/40 bg-accent/10 text-foreground"
                   : "border-foreground/10 text-foreground/70 hover:border-foreground/20"
@@ -95,12 +95,12 @@ export default function FallbackScreen({
           ))}
         </div>
         {checkedCompanies.size > 0 && (
-          <p className="text-sm text-accent">
+          <p className="text-base text-accent">
             If a name comes to mind for one of these, drop it below.
           </p>
         )}
         <div className="flex items-center justify-between gap-3 pt-1">
-          <p className="text-xs text-foreground/50">
+          <p className="text-sm text-foreground/50">
             Or paste this into LinkedIn&apos;s search bar, filtered to your connections.
           </p>
           <CopyButton text={LINKEDIN_SEARCH_PHRASE} label="Copy search" className="shrink-0" />
@@ -108,14 +108,14 @@ export default function FallbackScreen({
       </section>
 
       <section className="flex flex-col gap-2.5 rounded-xl border border-foreground/10 bg-white/60 p-4">
-        <h3 className="text-sm font-semibold text-foreground/80">
+        <h3 className="text-base font-semibold text-foreground/80">
           Prefer to just talk it through?
         </h3>
         <a
           href={CAL_COM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-fit items-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground transition-transform active:scale-[0.98] hover:brightness-110"
+          className="inline-flex w-fit items-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-base font-semibold text-accent-foreground transition-transform active:scale-[0.98] hover:brightness-110"
         >
           Book 15 min to brainstorm
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -126,7 +126,7 @@ export default function FallbackScreen({
 
       <section className="flex flex-col gap-2.5 rounded-xl border border-foreground/10 bg-white/60 p-4">
         <div className="flex items-center justify-between gap-3">
-          <h3 className="text-sm font-semibold text-foreground/80">
+          <h3 className="text-base font-semibold text-foreground/80">
             Know someone who&apos;d want to see this?
           </h3>
           <CopyButton
@@ -135,13 +135,13 @@ export default function FallbackScreen({
             className="shrink-0"
           />
         </div>
-        <p className="whitespace-pre-line text-sm leading-relaxed text-foreground/70">
+        <p className="whitespace-pre-line text-base leading-relaxed text-foreground/70">
           {FORWARD_BLURB}
         </p>
       </section>
 
       <section className="flex flex-col gap-2">
-        <label htmlFor="fitNotes" className="text-sm font-semibold text-foreground/80">
+        <label htmlFor="fitNotes" className="text-base font-semibold text-foreground/80">
           Where do you see me fitting?
         </label>
         <textarea
@@ -150,7 +150,7 @@ export default function FallbackScreen({
           onChange={(e) => setFitNotes(e.target.value)}
           rows={3}
           placeholder="A role, a team, a type of company — anything you're picturing."
-          className="rounded-xl border border-foreground/15 bg-white px-4 py-3 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
+          className="rounded-xl border border-foreground/15 bg-white px-4 py-3 text-lg outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
         />
       </section>
 
@@ -158,7 +158,7 @@ export default function FallbackScreen({
         type="button"
         onClick={handleSubmit}
         disabled={!canSubmit || isSubmitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-base font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-transform active:scale-[0.98] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-lg font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-transform active:scale-[0.98] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100"
       >
         {isSubmitting ? "Sending…" : "Send this to Steve"}
       </button>
