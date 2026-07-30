@@ -12,6 +12,15 @@ export const TARGET_COMPANIES = [
   "Target Company 6",
 ];
 
+export const TARGET_ROLES = [
+  "AI/ML Project Management",
+  "Program Management",
+  "Technical PM",
+  "PMO",
+];
+
+export const LINKEDIN_SEARCH_PHRASE = `AI Project Manager OR Program Manager OR "AI/ML"`;
+
 export function getReferralBlurb(contactName: string): string {
   const name = contactName.trim() || "[Name]";
   return `${name} — meet my friend Steve Ward. Steve — meet ${name}.

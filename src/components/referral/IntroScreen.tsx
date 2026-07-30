@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { TARGET_ROLES } from "@/lib/content";
 
 const HIGHLIGHTS = [
   "20 years of PM leadership at Dell, Boeing & Honeywell",
   "UT Austin McCombs — 7-month AI/ML program grad",
-  "Targeting AI Project Manager roles · Austin or remote",
+  "Targeting Austin or remote roles",
 ];
 
 export default function IntroScreen({ onNext }: { onNext: () => void }) {
@@ -45,6 +46,17 @@ export default function IntroScreen({ onNext }: { onNext: () => void }) {
           </li>
         ))}
       </ul>
+
+      <div className="flex flex-wrap gap-1.5">
+        {TARGET_ROLES.map((role) => (
+          <span
+            key={role}
+            className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent"
+          >
+            {role}
+          </span>
+        ))}
+      </div>
 
       <button
         type="button"

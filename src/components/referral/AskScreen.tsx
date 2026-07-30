@@ -76,6 +76,9 @@ export default function AskScreen({
             required
             className="rounded-xl border border-foreground/15 bg-white px-4 py-3 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20"
           />
+          <p className="text-xs text-foreground/50">
+            Tip: scrolling your LinkedIn connections for 30 seconds often jogs a name loose.
+          </p>
         </div>
 
         <div className="flex flex-col gap-1.5">
@@ -138,6 +141,9 @@ export default function AskScreen({
         >
           {isSubmitting ? "Sending…" : "Send this referral"}
         </button>
+        <p className="text-center text-xs text-foreground/50">
+          Any intro, big or small, is hugely appreciated.
+        </p>
       </form>
 
       <button

@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 import CopyButton from "@/components/CopyButton";
-import { CAL_COM_URL, FORWARD_BLURB, TARGET_COMPANIES } from "@/lib/content";
+import {
+  CAL_COM_URL,
+  FORWARD_BLURB,
+  LINKEDIN_SEARCH_PHRASE,
+  TARGET_COMPANIES,
+} from "@/lib/content";
 import { recordSubmission } from "@/lib/submissions";
 
 export default function FallbackScreen({
@@ -94,6 +99,12 @@ export default function FallbackScreen({
             If a name comes to mind for one of these, drop it below.
           </p>
         )}
+        <div className="flex items-center justify-between gap-3 pt-1">
+          <p className="text-xs text-foreground/50">
+            Or paste this into LinkedIn&apos;s search bar, filtered to your connections.
+          </p>
+          <CopyButton text={LINKEDIN_SEARCH_PHRASE} label="Copy search" className="shrink-0" />
+        </div>
       </section>
 
       <section className="flex flex-col gap-2.5 rounded-xl border border-foreground/10 bg-white/60 p-4">
